@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SwapiDemo</string>
+    <string-array name="nameList">
+        <item>Luke Skywalker</item>
+        <item>Yavin IV</item>
+        <item>Death Star</item>
+    </string-array>
+</resources>

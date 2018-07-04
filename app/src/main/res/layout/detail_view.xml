@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:gravity="center">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background"
+            android:layout_margin="3dp"
+            android:orientation="vertical">
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:background="#07000000"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="Details"
+                android:padding="@dimen/margin"
+                android:textColor="@color/labelTextColor"
+                />
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="5dp"
+                android:background="#E8E6E8" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:background="#07000000"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:padding="@dimen/margin"
+                android:text="Name :-"
+                android:textColor="@color/labelTextColor"
+                />
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:background="#07000000"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:padding="@dimen/margin"
+                android:text="Name"
+                android:textColor="@color/dateTextColor"
+                />
+        </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:background="#07000000"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:padding="@dimen/margin"
+                    android:text="Height in metres :-"
+                    android:textColor="@color/labelTextColor"
+                    />
+                <TextView
+                    android:id="@+id/height"
+                    android:layout_width="wrap_content"
+                    android:background="#07000000"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:padding="@dimen/margin"
+                    android:text="Height"
+                    android:textColor="@color/dateTextColor"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:background="#07000000"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:padding="@dimen/margin"
+                    android:text="Mass in kg :-"
+                    android:textColor="@color/labelTextColor"
+                    />
+                <TextView
+                    android:id="@+id/mass"
+                    android:layout_width="wrap_content"
+                    android:background="#07000000"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:padding="@dimen/margin"
+                    android:text="Mass in KG"
+                    android:textColor="@color/dateTextColor"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:background="#07000000"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:padding="@dimen/margin"
+                    android:text="Created Date :-"
+                    android:textColor="@color/labelTextColor"
+                    />
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="wrap_content"
+                    android:background="#07000000"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:padding="@dimen/margin"
+                    android:text="Date"
+                    android:textColor="@color/dateTextColor"
+                    />
+            </LinearLayout>
+            </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>
