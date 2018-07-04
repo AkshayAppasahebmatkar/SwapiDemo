@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        
         context = this.getApplicationContext();
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                 R.layout.list_item, R.id.txtName, getResources().getStringArray(R.array.nameList));
