@@ -83,7 +83,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="14sp"
                     android:padding="@dimen/margin"
-                    android:text="Height"
+                    android:text="No Parameter"
                     android:textColor="@color/dateTextColor"
                     />
             </LinearLayout>
@@ -108,7 +108,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="14sp"
                     android:padding="@dimen/margin"
-                    android:text="Mass in KG"
+                    android:text="No Parameter"
                     android:textColor="@color/dateTextColor"
                     />
             </LinearLayout>
