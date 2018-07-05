@@ -16,29 +16,35 @@ import java.net.URL;
 
 import javax.net.ssl.HttpsURLConnection;
 
-public class URLUtilAsync extends AsyncTask {
+public class URLUtilAsync extends AsyncTask<Object, Void, String> {
 
     private final String TAG = this.getClass().getName();
 
     private String url, data;
+   // ProgressBar bar;
+    private ProgressDialog progressDialog;
     private Context context;
-    ProgressDialog progressDialog;
 
     public URLUtilAsync(Context context, String url) {
         this.context = context;
         this.url = url;
+        progressDialog = new ProgressDialog(context);
+        //dialog = new ProgressDialog(context);
+       // setProgressBar(bar);
         this.execute();
     }
 
     @Override
     protected void onPreExecute() {
-        super.onPreExecute();
         // display a progress dialog for good user experiance
-        progressDialog = new ProgressDialog(context);
         progressDialog.setMessage("Please Wait");
         progressDialog.setCancelable(false);
         progressDialog.show();
+
+        /*dialog.setMessage("Doing something, please wait.");
+        dialog.show();*/
     }
+
     @Override
     protected String doInBackground(Object... params) {
 
@@ -52,7 +58,12 @@ public class URLUtilAsync extends AsyncTask {
 
         return data;
     }
-
+    @Override
+    protected void onPostExecute(String result) {
+        if (result != null || progressDialog.isShowing()) {
+            progressDialog.dismiss();
+        }
+    }
     private final String getDetails()
             throws IOException {
         String responseString = null;
@@ -113,18 +124,14 @@ public class URLUtilAsync extends AsyncTask {
     }
 
 
-    @Override
-    protected void onPostExecute(Object result) {
-        super.onPostExecute(result);
-        progressDialog.dismiss();
 
-    }
 
     private void showAlert() {
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(context);
 
         // Setting Dialog Title
         alertDialog.setTitle("Connection Issue...");
+
         // Setting Dialog Message
         alertDialog.setMessage("Try Again");
         alertDialog.setIcon(android.R.drawable.stat_notify_error);
